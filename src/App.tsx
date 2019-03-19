@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import HomePage from './components/pages/home';
+import moment from 'moment';
+import Footer from './components/partials/footer';
 
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <Switch>
-          <Route to="/" component={HomePage}/>
-        </Switch>
-      </BrowserRouter>
+      <div>
+        <BrowserRouter>
+          <Switch>
+            <Route to="/" component={HomePage}/>
+          </Switch>
+        </BrowserRouter>
+
+        <Footer />
+      </div>
     );
   }
 }

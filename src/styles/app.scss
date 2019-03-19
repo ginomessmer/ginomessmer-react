@@ -1,1 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Rubik');
+
+$blue: #007acc;
+$primary: $blue;
+
+$family-primary: "Raleway", sans-serif;
+$family-secondary: "Rubik", sans-serif;
+
+$body-family: $family-secondary;
+
+.title {
+	font-family: 'Raleway';
+}
+
 @import '~bulma/bulma.sass';

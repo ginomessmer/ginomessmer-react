@@ -1,4 +1,5 @@
 {
-	"files.autoSave": "onFocusChange",
-	"editor.cursorStyle": "line-thin"
+	"files.autoSave": "onWindowChange",
+	"editor.cursorStyle": "line-thin",
+	"editor.tabSize": 2
 }
