@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway|Rubik');
+@import url('https://fonts.googleapis.com/css?family=Raleway|Catamaran');
 
 $blue: #007acc;
 $primary: $blue;
+$black-ter: hsl(0, 0%, 14%);
 
 $family-primary: "Raleway", sans-serif;
-$family-secondary: "Rubik", sans-serif;
+$family-secondary: "Catamaran", sans-serif;
 
 $body-family: $family-secondary;
+
+$footer-background-color: $black-ter;
+$footer-padding: 1.5rem;
 
 .title {
 	font-family: 'Raleway';
