@@ -8,28 +8,31 @@ export default class HomePage extends Component {
 		return (
 			<div>
 				{this.renderHeroHeader()}
-				{this.renderAbout()}
 
-				<section className="section">
-					<div className="container">
-						<div className="columns">
-							<div className="column">
-								<h3 className="subtitle">Latest Posts</h3>
-								{this.renderPostsList()}
+				<div>
+					{this.renderAbout()}
 
-								<hr/>
-								<small><a href="https://www.medium.com/@ginomessmer">Follow me</a> on Medium for updates.</small>
-							</div>
+					<section className="section">
+						<div className="container">
+							<div className="columns">
+								<div className="column">
+									<h3 className="subtitle is-marginless">Latest Posts</h3>
+									<div className="is-size-6">
+										{this.renderPostsList()}
+									</div>
 
-							<div className="column">
-								<h3 className="subtitle">Latest Projects</h3>
-								{this.renderProjectsList()}
+									<hr/>
+									<small><a href="https://www.medium.com/@ginomessmer">Follow me</a> on Medium for updates.</small>
+								</div>
+
+								<div className="column">
+									<h3 className="subtitle is-marginless">Latest Projects</h3>
+									{this.renderProjectsList()}
+								</div>
 							</div>
 						</div>
-					</div>
-				</section>
-
-				<section className="section"></section>
+					</section>
+				</div>
 			</div>
 		)
 	}
@@ -99,14 +102,36 @@ export default class HomePage extends Component {
 	}
 
 	renderPostsList() {
+		let list = [
+			{
+				title: 'Placeholder',
+				link: 'placeholder'
+			}
+		];
+
 		return (
-			<div></div>
+			<ul>
+				{list.map(i =>
+					<li>&raquo; <a href={i.link}>{i.title}</a></li>
+				)}
+			</ul>
 		)
 	}
 
 	renderProjectsList() {
+		let list = [
+			{
+				title: '',
+				link: ''
+			}
+		];
+
 		return (
-			<div></div>
+			<ul>
+				{list.map(i =>
+					<li><a href={i.link}></a>{i.title}</li>
+				)}
+			</ul>
 		)
 	}
 

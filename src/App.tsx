@@ -3,19 +3,21 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import HomePage from './components/pages/home';
 import moment from 'moment';
 import Footer from './components/partials/footer';
+import PrivacyPolicyPage from './components/pages/privacy';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <BrowserRouter>
+      <BrowserRouter>
+        <div>
           <Switch>
-            <Route to="/" component={HomePage}/>
+            <Route path="/" exact component={HomePage} />
+            <Route path="/privacy" exact component={PrivacyPolicyPage} />
           </Switch>
-        </BrowserRouter>
 
-        <Footer />
-      </div>
+          <Footer />
+        </div>
+      </BrowserRouter>
     );
   }
 }
