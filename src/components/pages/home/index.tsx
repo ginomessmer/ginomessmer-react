@@ -2,8 +2,11 @@ import React, { Component } from 'react'
 import moment from 'moment';
 
 import HeroHeader from './hero';
+import { MetaContext } from '../../../common/context/meta-context';
 
-export default class HomePage extends Component {
+class HomePage extends Component {
+	meta = this.context;
+
   render() {
 		return (
 			<div>
@@ -72,16 +75,9 @@ export default class HomePage extends Component {
 	}
 
 	renderPostsList() {
-		let list = [
-			{
-				title: 'Placeholder',
-				link: 'placeholder'
-			}
-		];
-
 		return (
 			<ul>
-				{list.map(i =>
+				{this.meta.posts.map((i: any) =>
 					<li>&raquo; <a href={i.link}>{i.title}</a></li>
 				)}
 			</ul>
@@ -89,19 +85,16 @@ export default class HomePage extends Component {
 	}
 
 	renderProjectsList() {
-		let list = [
-			{
-				title: '',
-				link: ''
-			}
-		];
-
 		return (
 			<ul>
-				{list.map(i =>
+				{this.meta.projects.map((i: any) =>
 					<li><a href={i.link}></a>{i.title}</li>
 				)}
 			</ul>
 		)
 	}
 }
+
+HomePage.contextType = MetaContext;
+
+export default HomePage;
