@@ -9,7 +9,7 @@ export default class Footer extends Component {
 					<p>
 						&copy; 2019
 						<p className="is-size-7">
-							Written in React, proudly hosted with Docker on Azure
+							Written in React, proudly hosted by Docker on Azure
 						</p>
 
 						<p className="is-size-7">

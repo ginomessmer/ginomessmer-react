@@ -4,3 +4,25 @@
 body {
 	// margin: 0.8em;
 }
+
+.is-unsplash {
+	background-image: url(https://source.unsplash.com/user/ginomessmer);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+}
+
+.is-blur {
+	backdrop-filter: blur(4px);
+}
+
+.is-light-drop {
+	@extend .is-light;
+	background-color: rgba(255, 255, 255, 0.68) !important;
+}
+
+.is-primary-drop {
+	@extend .is-primary;
+	background-color: rgba(0, 122, 204, 0.68) !important;
+}
