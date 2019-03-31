@@ -10,12 +10,17 @@ export default class HeroHeader extends Component {
 				<section className="hero is-fullheight is-blur is-primary-drop">
 					<div className="hero-body">
 						<div className="container">
-							<figure className="image is-128x128">
-								<img className="is-rounded" src={me} />
-							</figure>
-
-							<h1 className="title">Gino Messmer</h1>
-							{this.getMyAge()} years old. I develop software, drink coffee, work and study at medialesson GmbH.
+							<div className="columns is-vcentered">
+								<div className="column is-narrow">
+									<figure className="image is-128x128 m-bottom">
+										<img className="is-rounded" src={me} />
+									</figure>
+								</div>
+								<div className="column">
+									<h1 className="title">Gino Messmer</h1>
+									{this.getMyAge()} years old. I develop software, drink coffee, work and study at medialesson GmbH.
+								</div>
+							</div>
 						</div>
 					</div>
 
