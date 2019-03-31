@@ -3,7 +3,7 @@ import moment from 'moment';
 
 import HeroHeader from './hero';
 import { MetaContext } from '../../../common/context/meta-context';
-import Meta from '../../../data/meta';
+
 import Project from '../../../data/project';
 import Post from '../../../data/post';
 
@@ -46,7 +46,7 @@ export default class HomePage extends Component {
 			<section className="section">
 				<div className="container">
 					<h2 className="subtitle is-size-4 is-marginless">Hey there!</h2>
-					<p>
+					<p className="is-size-5">
 						I'm Gino Messmer, a passionate software developer from Germany, currently working at medialesson GmbH and studying Applied Computer Science at DHBW Karlsruhe.
 					</p>
 				</div>
@@ -80,8 +80,8 @@ export default class HomePage extends Component {
 			<MetaContext.Consumer>
 				{meta => (
 					<ul>
-						{meta.posts.map((i: Post) =>
-							<li>&raquo; <a href={i.link}>{i.title}</a></li>
+						{meta.posts.reverse().map((i: Post) =>
+							<li key={Math.random()}>&raquo; <a href={i.link}>{i.title}</a></li>
 						)}
 					</ul>
 				)}
@@ -95,7 +95,7 @@ export default class HomePage extends Component {
 				{meta => (
 					<ul>
 						{meta.projects.map((i: Project) =>
-							<li><a href={i.link}></a>{i.title}</li>
+							<li key={Math.random()}>&raquo; <a href={i.link} target="_blank">{i.title}</a> - {i.description}</li>
 						)}
 					</ul>
 				)}

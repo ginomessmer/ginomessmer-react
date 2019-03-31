@@ -13,7 +13,7 @@ export default class Footer extends Component {
 						</p>
 
 						<p className="is-size-7">
-							<Link to="/privacy">Privacy Policy</Link>
+							<Link to="/privacy">Privacy Policy</Link> &middot; <Link to="/imprint">Impressum</Link>
 						</p>
 					</p>
 				</div>

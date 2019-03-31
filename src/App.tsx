@@ -7,6 +7,7 @@ import PrivacyPolicyPage from './components/pages/privacy';
 import { MetaContext } from './common/context/meta-context';
 import Meta from './data/meta';
 import { getMetaData } from './common/services/remote-service';
+import ImprintPage from './components/pages/imprint';
 
 interface AppState {
   meta: Meta;
@@ -41,6 +42,7 @@ class App extends Component<{ }, AppState> {
             <Switch>
               <Route path="/" exact component={HomePage} />
               <Route path="/privacy" exact component={PrivacyPolicyPage} />
+              <Route path="/imprint" exact component={ImprintPage} />
             </Switch>
 
             <Footer />
