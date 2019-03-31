@@ -3,10 +3,11 @@ import moment from 'moment';
 
 import HeroHeader from './hero';
 import { MetaContext } from '../../../common/context/meta-context';
+import Meta from '../../../data/meta';
+import Project from '../../../data/project';
+import Post from '../../../data/post';
 
-class HomePage extends Component {
-	meta = this.context;
-
+export default class HomePage extends Component {
   render() {
 		return (
 			<div>
@@ -76,25 +77,29 @@ class HomePage extends Component {
 
 	renderPostsList() {
 		return (
-			<ul>
-				{this.meta.posts.map((i: any) =>
-					<li>&raquo; <a href={i.link}>{i.title}</a></li>
+			<MetaContext.Consumer>
+				{meta => (
+					<ul>
+						{meta.posts.map((i: Post) =>
+							<li>&raquo; <a href={i.link}>{i.title}</a></li>
+						)}
+					</ul>
 				)}
-			</ul>
+			</MetaContext.Consumer>
 		)
 	}
 
 	renderProjectsList() {
 		return (
-			<ul>
-				{this.meta.projects.map((i: any) =>
-					<li><a href={i.link}></a>{i.title}</li>
+			<MetaContext.Consumer>
+				{meta => (
+					<ul>
+						{meta.projects.map((i: Project) =>
+							<li><a href={i.link}></a>{i.title}</li>
+						)}
+					</ul>
 				)}
-			</ul>
+			</MetaContext.Consumer>
 		)
 	}
 }
-
-HomePage.contextType = MetaContext;
-
-export default HomePage;

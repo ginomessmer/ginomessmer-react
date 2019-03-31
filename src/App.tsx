@@ -6,27 +6,36 @@ import Footer from './components/partials/footer';
 import PrivacyPolicyPage from './components/pages/privacy';
 import { MetaContext } from './common/context/meta-context';
 import Meta from './data/meta';
+import { getMetaData } from './common/services/remote-service';
 
-class App extends Component {
+interface AppState {
+  meta: Meta;
+}
 
-  private remoteMeta: Meta = {
-    posts: [],
-    projects: []
+class App extends Component<{ }, AppState> {
+  constructor() {
+    super({});
+
+    this.state = {
+      meta: {
+        posts: [],
+        projects: []
+      }
+    }
   }
 
   async componentDidMount() {
-    let response = await fetch('https://ginomessmer.blob.core.windows.net/dump/sOpD.txt', {
+    let data = (await getMetaData()) as Meta;
+    console.log(data)
 
-    });
-    if (response.ok) {
-      let data = (await response.json()) as Meta;
-      this.remoteMeta = data;
+    if (data !== null) {
+      this.setState({meta: data});
     }
   }
 
   render() {
     return (
-      <MetaContext.Provider value={this.remoteMeta}>
+      <MetaContext.Provider value={this.state.meta}>
         <BrowserRouter>
           <div>
             <Switch>
