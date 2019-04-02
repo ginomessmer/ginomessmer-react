@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import moment from 'moment';
 
 import me from '../../../assets/me.jpg';
+import { getAge } from '../../../common/helpers/math';
 
 export default class HeroHeader extends Component {
 	render() {
@@ -18,7 +19,7 @@ export default class HeroHeader extends Component {
 								</div>
 								<div className="column">
 									<h1 className="title">Gino Messmer</h1>
-									{this.getMyAge()} years old. I develop software, drink coffee, work and study at medialesson GmbH.
+									{getAge('01-04-1999')} years old. I develop software, drink coffee, work and study at medialesson GmbH.
 								</div>
 							</div>
 						</div>
@@ -39,13 +40,5 @@ export default class HeroHeader extends Component {
 				</section>
 			</div>
 		)
-	}
-
-	getMyAge(): number {
-		let birthdate = Date.UTC(1999, 4, 1);
-		let now = Date.now();
-
-		let years = moment.duration(now - birthdate).asYears();
-		return Math.floor(years);
 	}
 }
