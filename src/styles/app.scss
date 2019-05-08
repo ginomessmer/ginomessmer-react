@@ -16,4 +16,11 @@ $footer-padding: 1.5rem;
 	font-family: 'Raleway';
 }
 
+// Project modal
+.project-summary {
+	h1 {
+		@extend .title;
+	}
+}
+
 @import '~bulma/bulma.sass';

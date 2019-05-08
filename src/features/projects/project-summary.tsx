@@ -23,7 +23,7 @@ export const ProjectSummaryContainer = (props: { projectId: string | undefined, 
 	return (
 		<ReactModal isOpen={props.isOpen}>
 			<button className="delete" style={{float: 'right'}} onClick={() => props.closeCallback()}></button>
-			<ReactMarkdown escapeHtml={false} source={markdownInput} />
+			<ReactMarkdown className="project-summary" escapeHtml={false} source={markdownInput} />
 		</ReactModal>
 	);
 }
