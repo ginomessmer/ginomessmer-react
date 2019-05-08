@@ -6,6 +6,7 @@ import { MetaContext } from '../../../common/context/meta-context';
 
 import Project from '../../../data/project';
 import Post from '../../../data/post';
+import { ProjectList } from '../../../features/projects';
 
 export default class HomePage extends Component {
   render() {
@@ -93,11 +94,7 @@ export default class HomePage extends Component {
 		return (
 			<MetaContext.Consumer>
 				{meta => (
-					<ul>
-						{meta.projects.map((i: Project) =>
-							<li key={Math.random()}>&raquo; <a href={i.link} target="_blank">{i.title}</a> - {i.description}</li>
-						)}
-					</ul>
+					<ProjectList projects={meta.projects} />
 				)}
 			</MetaContext.Consumer>
 		)
