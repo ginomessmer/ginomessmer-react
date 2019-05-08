@@ -1,0 +1,38 @@
+{
+	"projects": [
+		{
+				"title": "Doki",
+				"description": "Donation kiosk for small teams and students",
+				"link": "https://www.github.com/medialesson/doki-uwp"
+		},
+		{
+				"title": "SnippetsDB",
+				"description": "Research project based on ASP.NET - mediator pattern, etc.",
+				"link": "https://www.github.com/medialesson/snippets-db"
+		},
+		{
+				"title": "FT Software",
+				"description": "Team projects",
+				"link": "https://ftsoftware.eu"
+		},
+		{
+				"title": "TML-Studios",
+				"description": "2015 - community relaunch, site development, theming, migration",
+				"link": "https://www.tml-studios.de"
+		}
+	],
+	"posts": [
+		{
+				"title": "Get started with private NuGet feeds in VSTS",
+				"link": "https://medium.com/@ginomessmer/get-started-with-private-nuget-feeds-in-vsts-8c7b5f022a68"
+		},
+		{
+				"title": "Fun with Unity and Guilloche Patterns",
+				"link": "https://medium.com/medialesson/fun-with-unity-and-guilloche-patterns-59aae81e4a0c"
+		},
+		{
+				"title": "Build React forms and validation with Formik like a boss",
+				"link": "https://medium.com/@ginomessmer/build-react-forms-and-validation-like-a-boss-with-formik-3d1f0c0fe52e?source=friends_link&sk=75cffda33cc9920d26389ce1db5d3d22"
+		}
+	]
+}
