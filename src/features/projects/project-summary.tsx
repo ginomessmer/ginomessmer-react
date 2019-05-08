@@ -4,25 +4,26 @@ import ReactMarkdown from 'react-markdown';
 
 import { getProjectMarkdown } from '../../common/services/remote-service';
 
-export const ProjectSummaryContainer = (props: { projectId: string, isOpen: boolean }) => {
+export const ProjectSummaryContainer = (props: { projectId: string | undefined, isOpen: boolean, closeCallback: Function }) => {
 
 	const [markdownInput, setMarkdownInput] = useState<string>();
 
 	useEffect(() => {
-		return () => {
-			getProjectMarkdown(props.projectId).then(result => {
-				if (result === null) {
-					return;
-				}
+		if (props.projectId === '') { return; }
 
-				setMarkdownInput(result);
-			});
-		};
-	}, [])
+		getProjectMarkdown(props.projectId as string).then(result => {
+			if (result === null) {
+				return;
+			}
+
+			setMarkdownInput(result);
+		});
+	}, [props.projectId]);
 
 	return (
 		<ReactModal isOpen={props.isOpen}>
-			<ReactMarkdown source={markdownInput} />
+			<button className="delete" style={{float: 'right'}} onClick={() => props.closeCallback()}></button>
+			<ReactMarkdown escapeHtml={false} source={markdownInput} />
 		</ReactModal>
 	);
 }

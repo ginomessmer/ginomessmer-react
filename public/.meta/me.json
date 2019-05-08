@@ -1,24 +1,28 @@
 {
 	"projects": [
 		{
-				"title": "Doki",
-				"description": "Donation kiosk for small teams and students",
-				"link": "https://www.github.com/medialesson/doki-uwp"
+			"key": "doki",
+			"title": "Doki",
+			"description": "Donation kiosk for small teams and students",
+			"link": "https://www.github.com/medialesson/doki-uwp"
 		},
 		{
-				"title": "SnippetsDB",
-				"description": "Research project based on ASP.NET - mediator pattern, etc.",
-				"link": "https://www.github.com/medialesson/snippets-db"
+			"key": "snippetsdb",
+			"title": "SnippetsDB",
+			"description": "Research project based on ASP.NET - mediator pattern, etc.",
+			"link": "https://www.github.com/medialesson/snippets-db"
 		},
 		{
-				"title": "FT Software",
-				"description": "Team projects",
-				"link": "https://ftsoftware.eu"
+			"key": "ftsoftware",
+			"title": "FT Software",
+			"description": "Team projects",
+			"link": "https://ftsoftware.eu"
 		},
 		{
-				"title": "TML-Studios",
-				"description": "2015 - community relaunch, site development, theming, migration",
-				"link": "https://www.tml-studios.de"
+			"key": "tml-studios",
+			"title": "TML-Studios",
+			"description": "2015 - community relaunch, site development, theming, migration",
+			"link": "https://www.tml-studios.de"
 		}
 	],
 	"posts": [

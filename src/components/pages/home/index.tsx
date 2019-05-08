@@ -7,6 +7,7 @@ import { MetaContext } from '../../../common/context/meta-context';
 import Project from '../../../data/project';
 import Post from '../../../data/post';
 import { ProjectList } from '../../../features/projects';
+import Meta from '../../../data/meta';
 
 export default class HomePage extends Component {
   render() {
@@ -93,7 +94,7 @@ export default class HomePage extends Component {
 	renderProjectsList() {
 		return (
 			<MetaContext.Consumer>
-				{meta => (
+				{(meta: Meta) => (
 					<ProjectList projects={meta.projects} />
 				)}
 			</MetaContext.Consumer>
