@@ -56,20 +56,30 @@ export default class HomePage extends Component {
 				<hr/>
 
 				<div className="container">
-					<div className="columns is-size-7">
-						<div className="column is-narrow">
-							<ul>
-								<li>&raquo; .NET, C#, Azure, React, UWP</li>
-								<li>&raquo; Visual Studio, Git, DevOps, CI&CD</li>
-								<li>&raquo; Windows, Ubuntu Server, Docker</li>
-							</ul>
+					<div className="skills">
+						<div className="tags">
+							<span className="tag is-info">.NET</span>
+							<span className="tag is-info">C#</span>
+							<span className="tag is-info">Azure</span>
+							<span className="tag is-info">React</span>
+							<span className="tag is-info">UWP</span>
 						</div>
-						<div className="column">
-							<ul>
-								<li>&raquo; German, English</li>
-								<li>&raquo; Traveller, photography</li>
-								<li>&raquo; Coffee obviously</li>
-							</ul>
+						<div className="tags">
+							<span className="tag is-dark">Visual Studio</span>
+							<span className="tag is-dark">Git</span>
+							<span className="tag is-dark">DevOps</span>
+							<span className="tag is-dark">CI&CD</span>
+						</div>
+						<div className="tags">
+							<span className="tag is-warning">Windows</span>
+							<span className="tag is-warning">Ubuntu Server</span>
+							<span className="tag is-warning">Docker</span>
+						</div>
+						<div className="tags">
+							<span className="tag is-light">German</span>
+							<span className="tag is-light">English</span>
+							<span className="tag is-light">Traveller</span>
+							<span className="tag is-light">Coffee</span>
 						</div>
 					</div>
 				</div>
